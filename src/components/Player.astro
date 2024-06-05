@@ -1,0 +1,18 @@
+---
+import "vidstack/player/styles/default/theme.css";
+import "vidstack/player/styles/default/layouts/audio.css";
+import "vidstack/player/styles/default/layouts/video.css";
+---
+
+<div id="target" class="not-content"></div>
+
+<script>
+  const { VidstackPlayer, VidstackPlayerLayout } = await import('vidstack/global/player');
+
+  VidstackPlayer.create({
+    target: "#target",
+    title: "How to verify files",
+    src: "/src/assets/how_to_verify_files.mp4",
+    layout: new VidstackPlayerLayout
+  });
+</script>

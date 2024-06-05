@@ -1,0 +1,73 @@
+/* Theme */
+
+:root {
+	--sl-color-accent-low: #331241;
+	--sl-color-accent: #9d00ce;
+	--sl-color-accent-high: #deb8f2;
+}
+
+:root[data-theme="light"] {
+	--sl-color-accent-low: #e7caf7;
+	--sl-color-accent: #9f00d1;
+	--sl-color-accent-high: #4a1161;
+}
+
+:root {
+  --sl-content-width: calc(100% - 16rem);
+  --sl-nav-gap: 0.5rem;
+}
+
+/* Header */
+
+header {
+  background-image: url("../assets/bg.png");
+}
+
+header > div > div > site-search > button {
+  background: rgba(23, 24, 28, 0.5) !important;
+}
+
+header > div > div > a > span {
+  color: white;
+  font-weight: 800;
+  font-size: 20px;
+}
+
+header > div > div > div > a {
+  color: rgb(212, 212, 216);
+}
+
+/* Nav */
+
+nav > div > div > ul > li:nth-child(3) > details > summary,
+nav > div > div > ul > li:first-child > details > summary {
+  display: none;
+}
+
+nav > div > div > ul > li:nth-child(3),
+nav > div > div > ul > li:first-child {
+  --sl-color-hairline-light: transparent !important;
+}
+
+nav > div > div > ul > li:nth-child(3) > details > ul > li,
+nav > div > div > ul > li:first-child > details > ul > li {
+  padding-left: 0;
+  margin-left: 0;
+}
+
+/* Content */
+
+.content-panel {
+  --sl-content-margin-inline: 5rem 0;
+}
+
+.content-panel:first-child {
+  display: none;
+}
+
+/* Tabs Fix */
+
+starlight-tabs > div > ul > li > a {
+  height: 100%;
+  text-wrap: balance;
+}

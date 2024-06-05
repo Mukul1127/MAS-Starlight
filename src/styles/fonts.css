@@ -1,0 +1,33 @@
+@font-face {
+  font-family: "Inter";
+  font-weight: 100 900;
+  font-display: swap;
+  font-style: normal;
+  src: url("/Inter.woff2") format("woff2"),
+       url("/Inter.woff2") format("woff2-variations"),
+       url("/Inter.woff2") format("woff2 supports variations"),
+       url("/Inter.woff2") format("woff2") tech("variations");
+  unicode-range: 0020—007F;
+}
+
+@font-face {
+  font-family: "CascadiaCode";
+  font-weight: 100 900;
+  font-display: swap;
+  font-style: normal;
+  src: url("/CascadiaCode.woff2") format("woff2"),
+       url("/CascadiaCode.woff2") format("woff2-variations"),
+       url("/CascadiaCode.woff2") format("woff2 supports variations"),
+       url("/CascadiaCode.woff2") format("woff2") tech("variations");
+  unicode-range: 0020—007F;
+}
+
+:root {
+  --sl-font: "Inter";
+  --sl-font-mono: "CascadiaCode";
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+
+  font-feature-settings: "ss01", "cv05", "ss03", "case", "cv06", "cv11", "liga" 1, "calt" 1
+}
