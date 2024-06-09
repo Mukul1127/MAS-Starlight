@@ -1,4 +1,3 @@
-import starlight from "@astrojs/starlight";
 import { defineConfig } from "astro/config";
 import { vite as vidstack } from "vidstack/plugins";
 
@@ -6,7 +5,7 @@ import { vite as vidstack } from "vidstack/plugins";
 export default defineConfig({
   site: "https://massgrave.dev",
   integrations: [
-    starlight({
+    (await import("@astrojs/starlight")).default({
       title: "MAS",
       favicon: "/favicon.ico",
       logo: {
