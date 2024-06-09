@@ -1,0 +1,4 @@
+pre-commit:
+  commands:
+    check:
+      run: bun check && git update-index

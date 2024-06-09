@@ -1,6 +1,6 @@
-import { defineConfig } from "astro/config";
 import starlight from "@astrojs/starlight";
-import { vite as vidstack } from 'vidstack/plugins';
+import { defineConfig } from "astro/config";
+import { vite as vidstack } from "vidstack/plugins";
 
 // https://astro.build/config
 export default defineConfig({
@@ -10,14 +10,12 @@ export default defineConfig({
       title: "MAS",
       favicon: "/favicon.ico",
       logo: {
-        src: "@/assets/logo_small.png",
+        src: "@/assets/logo_small.png"
       },
-      customCss: [
-        "@/styles/fonts.css",
-        "@/styles/custom.css"
-      ],
+      customCss: ["@/styles/fonts.css", "@/styles/custom.css"],
       editLink: {
-        baseUrl: "https://github.com/massgravel/Microsoft-Activation-Scripts/edit/main/docs/",
+        baseUrl:
+          "https://github.com/massgravel/Microsoft-Activation-Scripts/edit/main/docs/"
       },
       social: {
         discord: "https://discord.gg/tVFN4N84PP",
@@ -114,13 +112,18 @@ export default defineConfig({
               link: "/contactus"
             }
           ]
-        },
+        }
       ]
-    })
+    }),
+    (await import("@playform/compress")).default()
   ],
   vite: {
-    plugins: [
-      vidstack()
-    ]
+    plugins: [vidstack()],
+    css: {
+      transformer: "lightningcss"
+    },
+    build: {
+      cssMinify: "lightningcss"
+    }
   }
 });

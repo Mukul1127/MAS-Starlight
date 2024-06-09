@@ -6,14 +6,21 @@
     "dev": "astro dev",
     "build": "astro check && astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "check": "biome check . --write --no-errors-on-unmatched --files-ignore-unknown=true",
+    "astro": "astro",
+    "lefthook": "lefthook"
   },
   "dependencies": {
     "@astrojs/check": "^0.7.0",
-    "@astrojs/starlight": "^0.24.0",
-    "astro": "^4.9.3",
+    "@astrojs/starlight": "^0.24.1",
+    "@playform/compress": "^0.0.12",
+    "astro": "^4.10.1",
     "sharp": "^0.33.4",
     "typescript": "^5.4.5",
-    "vidstack": "^1.11.21"
+    "vidstack": "next"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^1.8.0",
+    "lefthook": "^1.6.15"
   }
 }
