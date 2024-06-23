@@ -3,24 +3,25 @@
   "type": "module",
   "version": "1.0.0",
   "scripts": {
-    "dev": "bunx --bun astro dev",
-    "build": "bunx --bun astro build",
-    "preview": "bunx --bun astro preview",
-    "astro": "bunx --bun astro",
-    "check": "bunx --bun @biomejs/biome check . --write --no-errors-on-unmatched --files-ignore-unknown=true",
-    "hook": "bunx --bun lefthook install"
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "check": "biome check . --write --no-errors-on-unmatched --files-ignore-unknown=true",
+    "hook": "lefthook install"
   },
   "dependencies": {
     "@astrojs/check": "^0.7.0",
-    "@astrojs/starlight": "^0.24.1",
-    "@playform/compress": "^0.0.12",
-    "astro": "^4.10.2",
+    "@astrojs/starlight": "^0.24.4",
+    "@playform/compress": "^0.0.13",
+    "astro": "^4.11.0",
     "sharp": "^0.33.4",
-    "typescript": "^5.4.5",
-    "vidstack": "^1.11.22"
+    "typescript": "^5.5.2",
+    "vidstack": "^1.11.24"
   },
   "devDependencies": {
-    "@biomejs/biome": "^1.8.1",
-    "lefthook": "^1.6.15"
-  }
+    "@biomejs/biome": "^1.8.2",
+    "lefthook": "^1.6.18"
+  },
+  "packageManager": "pnpm@9.4.0+sha512.f549b8a52c9d2b8536762f99c0722205efc5af913e77835dbccc3b0b0b2ca9e7dc8022b78062c17291c48e88749c70ce88eb5a74f1fa8c4bf5e18bb46c8bd83a"
 }
